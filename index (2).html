@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+*{
+margin: 0px;
+}
+    #body{
+        height: 600px;
+         width: 100%;
+          background-image: url(./login\ logo.jpg);
+          background-repeat: no-repeat;
+          background-size: 100% 600px;
+         
+    }
+    #inner{
+        height: 350px; 
+        width: 300px;
+         background-color:darkgrey; 
+         border: 4px groove black;
+    background-image: radial-gradient(rgb(255, 0, 0),rgb(0, 128, 11),rgb(30, 0, 255));
+    }
+</style>
+
+<body>
+    <div id="body">
+        <br><br><br>
+    <center>
+    <div id="inner">
+        <br>
+        <h1>SIGN UP</h1><br><br>
+    <form action="">
+        <label for="">EMAIL:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="text"  placeholder="mail"  id="a" >
+        <br><br>
+        <label for="">PASSWORD:</label>
+        <input type="password" placeholder="password" id="b">
+        <br><br>
+        <label for="">NAME:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="text" placeholder="name" id="c">
+        <br><br>
+        <button style="background-color: rgb(42, 165, 108);">Submit</button>
+    </form>
+        
+    </div></center>
+
+    
+</div>
+    <script>
+        f=document.querySelector("button")
+        f.addEventListener("click",() =>
+        {
+            a=document.getElementById("a").value
+            b=document.getElementById("b").value
+            c=document.getElementById("c").value
+            sessionStorage.setItem("mail",a)
+            sessionStorage.setItem("password",b)
+            sessionStorage.setItem("name",c)   
+        if (a!=""&&b!=""&&c!="") {
+            window.open("index.html")
+        } 
+        else if (a==""||b==""||c=="")
+        {
+            window.alert("Enter all the credentials")
+        }
+        })
+        
+        
+    </script>
+</body>
+</html>
